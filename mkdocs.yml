@@ -1,0 +1,54 @@
+site_name: C++テストチュートリアル
+theme:
+   name: material
+   features:
+      - content.code.copy
+      - content.code.select
+markdown_extensions:
+   - attr_list
+   - admonition
+   - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+   - pymdownx.inlinehilite
+   - attr_list
+   - pymdownx.arithmatex
+   - pymdownx.snippets
+   - pymdownx.superfences
+   - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+nav:
+   - 1. はじめに: index.md
+   - 2. C++のテスト環境:
+        - 3.1 必要なツールの取得: get_test_env.md
+        - 3.2 CMakeの基本: basic_of_cmake.md
+        - 3.3 空のテスト環境: create_empty_test.md
+   - Catch2（v2.13.10）:
+        - ./catch2/Readme.md
+        - チュートリアル: catch2/tutorial.md
+        - テストの記述に関する情報:
+             - アサーションマクロ: ./catch2/assertions.md
+             - マッチャー: ./catch2/matchers.md
+             - ログ出力用マクロ: ./catch2/logging.md
+             - テストケースとセクション: ./catch2/test-cases-and-sections.md
+             - テストフィクスチャ: ./catch2/test-fixtures.md
+             - レポーター: ./catch2/reporters.md
+             - イベントリスナー: ./catch2/event-listeners.md
+             - データジェネレーター: ./catch2/generators.md
+             - その他のマクロ: ./catch2/other-macros.md
+             - マイクロベンチマーク: ./catch2/benchmarks.md
+        - 細かい調整に関する情報:
+             - 独自の main() を提供する: ./catch2/own-main.md
+             - コンパイル時設定: ./catch2/configuration.md
+             - 文字列変換: ./catch2/tostring.md
+        - テストの実行に関する情報:
+             - コマンドライン: ./catch2/command-line.md
+        - その他のトピック:
+             - CMake との統合: ./catch2/cmake-integration.md
+             - CI（継続的インテグレーション）やその他の補足情報: ./catch2/ci-and-misc.md
+        - よくある質問（FAQ）:
+             - なぜテストのコンパイルが遅いのか？: ./catch2/slow-compiles.md
+             - 既知の制限事項: ./catch2/limitations.md
+        - 非推奨および今後の変更: ./catch2/deprecations.md
